@@ -16,10 +16,10 @@ Por último y para aclararlo, los `Dockerfile` de cada servicio son exactamente 
 
 ### Comandos
 
-Los comandos han sido los de docker compose a la hora de levantar y matar los servicios
+Los comandos han sido los de docker y docker-compose a la hora de levantar y matar los servicios
 
 * Iniciar sesión: `docker login -u {usuario}`
-* Subir dockerfile con la imagen: `docker build .`
+* Subir dockerfile con la imagen de cada servicio: `docker build {mi-servicio} .`
 * Levantar docker-compose tras su configuraci-on: `docker-compose up`
 * Comprobamos los contenedores activos: `docker ps`
 * Apagamos los servicios, para probar, con: `docker-compose down`
