@@ -4,7 +4,7 @@ Proceso detallado del uso de Docker Compose y el levantamiento de un conjunto de
 
 ## Proceso
 
-Primero debemos organizar por carpetas los distintos microservicios, y en el directorio raíz creamos el docker-compose.yml donde editamos y añadimos todas las imágenes que vamos a levantar, las cuales están en cada directorio de sus respectivos servicios que previamente hemos buildeado en Docker (es decir, cada carpeta contiene el .jar y el `Dockerfile` también adjunto en este repositorio)
+Primero debemos organizar por carpetas los distintos microservicios, y en el directorio raíz creamos el `docker-compose.yml` donde editamos y añadimos todas las imágenes que vamos a levantar, las cuales están en cada directorio de sus respectivos servicios que previamente hemos buildeado en Docker (es decir, cada carpeta contiene el .jar y el `Dockerfile` también adjunto en este repositorio). En `docker ps` nos aparecerá cada imagen del repositorio y es el nombre que debemos usar en el .yml para que lance desde ahí los servicios en lugar de tirar de un registry externo
 
 Luego en cada servicio, al buildearlo, le indicamos en su Dockerfile las instrucciones (puertos, rutas...) para que el compose nos levante cada servicio y establezca sus reglas, como por ejemplo los puertos de cada uno. Tras esto, y una vez terminemos de configurar el `docker-compose.yml`, lanzamos `docker-compose up` y se nos levantan todos los servicios. Cada uno con su puerto mapeado
 
